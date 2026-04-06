@@ -1,0 +1,79 @@
+.associations-section {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  text-align: center;
+  font-family: 'Times New Roman', serif;
+}
+
+.associations-title {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 50px;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+.associations-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.association-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container {
+  width: 100%;
+  aspect-ratio: 1 / 0.8; /* Maintains the rectangular proportions seen in screenshot */
+  border: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 15px;
+  transition: box-shadow 0.3s ease;
+}
+
+.logo-container:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.logo-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(20%); /* Optional: subtle uniform look */
+}
+
+.association-desc {
+  font-size: 13px;
+  color: #444;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0 10px;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .associations-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .associations-grid {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 300px;
+  }
+  
+  .associations-title {
+    font-size: 22px;
+  }
+}
